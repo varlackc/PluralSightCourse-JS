@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>JavaScript Tutorial</title>
+	</head>
+	
+	<body>
+		<h1>JavaScript PluralSight Tutorial</h1>
+		<h2>This Page was intentionally left blank</h2>
+		
+		<script>	
+		
+		//----- Higher Order Functions -------------//
+		
+		//1 - Takes a function as an input(argument)
+		element.addEventListener("click", function(){
+			console.log("element clicked!");
+		});
+		
+		//2 - returns a function as the output
+		var add = function(num){
+			var num1 = num;
+			
+			// returns a function
+			return addToNum1 = function(num2){
+				return num1 + num2;
+			};
+		};
+		//-------------------------------------------------------------//
+		
+		
+		//----- Example with an if else function -------------//
+		var ifElse = function(condition, isTrue, isFalse){
+			if(condition){
+				return isTrue();
+			} else {
+				return isFalse();
+			}
+		};
+		
+		ifElse(true, 
+			function(){console.log(true);}, 
+			function(){console.log(false)}
+		);
+		//-------------------------------------------------------------//
+		
+		//----- Example with an if else function -------------//
+		var ifElse = function(condition, isTrue, isFalse){
+			if(condition){
+				return isTrue();
+			} else {
+				return isFalse();
+			}
+		};
+		
+			var logTrue = function(){console.log(true);}, 
+			var logFalse = function(){console.log(false)}
+		
+		ifElse(true,logTrue, logFalse);
+		//-------------------------------------------------------------//
+		
+		//----- Example with an if else function -------------//
+		var ifElse = function(condition, isTrue, isFalse){
+			if(condition){
+				isTrue();
+			} else {
+				isFalse();
+			}
+			return undefined;
+		};
+		
+			var logTrue = function(){console.log(true);};
+			var logFalse = function(){console.log(false);};
+		
+		ifElse(true,logTrue, logFalse);
+		//-------------------------------------------------------------//
+		
+		//----- Passing Arguments -------------//
+		var increment = function(n){ return n + 1; };
+		var square = function(n){ return n*n; };
+		var doMathSoIDontHaveTo = function(n, func){return func(n); };
+		doMathSoIDontHaveTo(5, square);
+		doMathSoIDontHaveTo(4, increment);
+		//-------------------------------------------------------------//
+		
+		
+		//----- Passing Arguments -------------//
+		var ifElse = function(condition, isTrue, isFalse, arg){
+			if(condition){
+				isTrue(aj);
+			} else {
+				isFalse(arg);
+			}
+		};
+		
+		ifElse(true, function(){}, function(){}, function(){}, 'asdf');
+		//-------------------------------------------------------------//
+		
+		//----- Higher order functions -------------//
+		var ifElese = function(){
+			if(condition){
+				isTrue(arg);
+			} else {
+				ifFalse(arg);
+			}
+		};
+		
+		ifElse(true, function(x){console.log(x)}, function(x){console.log(x)}, 'asdf');
+		//-------------------------------------------------------------//
+		
+		</script>
+	</body>
+</html>

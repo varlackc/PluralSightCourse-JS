@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>JavaScript Tutorial</title>
+	</head>
+	
+	<body>
+		<h1>JavaScript PluralSight Tutorial</h1>
+		<h2>This Page was intentionally left blank</h2>
+		
+		<script>	
+
+		//----- Closure Exercise Solution -------------//
+		var blab = function(){
+			alert(string);
+		};
+		
+		var nonsense = function(string){
+			var blab = function(){
+				alert(string);
+			};
+			blab();
+		};
+		
+		nonsense('blah blah blah');
+
+		// ----------------
+		
+		var nonsense = function(string){
+			var blab = function(){
+				alert(string);
+			};
+			return blab;
+		};
+		
+		var blabLater = nonsense('blah blah blah');
+		blabLater(); // alert 'blah blah blah'
+		var blabagainLater = nonsense('hehehe');
+		blabAgainLater(); //alert 'hehehe!'
+		blabLater(); // alert 'blah blah blah'
+		
+		console.log(blabLater);
+		console.log(blabAgainLater);
+		
+		var lastNameTrier = function(firstName){
+			// does stuff
+			
+			var innerFunction = function(){
+				//does stuff
+			};
+			//maybe returns something here
+		};
+		
+		var firstNameFarmer = lastNameTrier('Farmer'); //logsnothing
+		firstNameFarmer('Brown'); //logs 'Farmer Brown'
+		
+		
+		fistNameFarmer('Jane'); //logs 'Farmer Jane'
+		firstnameFarmer('Lynne'); //logs 'Farmer Lynne'
+		
+		var lastNameTrier = function(firstName){
+			var inner = function(lastName){
+				console.log(firstName +" "+lastname);
+			};
+			return inner;
+		};
+		//-------------------------------------------------------------//
+		</script>
+	</body>
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>JavaScript Tutorial</title>
+	</head>
+	
+	<body>
+		<h1>JavaScript PluralSight Tutorial</h1>
+		<h2>This Page was intentionally left blank</h2>
+		
+		<script>
+		
+		<!------------- Scope ------------------------>
+		/*
+			Scope: Is where the variables have meaning. 
+			variables can have local and global scope
+			
+			scope is created when the function is called
+			
+			local scope: is when a
+		*/
+		
+		// the variable has a local scope because it is declared
+		// inside the function
+		var func = function(){
+			var local = true;
+		};
+		console.log(local); // this is not defined and gives an error
+		// because the local was defined inside 
+		
+		//global scope can create naming collisions
+		
+		var x = 'glogal!'; // this is a global variable
+		//inside a function
+		function encapsulate(){
+			z = 'global here, too!'; // this is global becase it is not declared as var
+			
+			window.y = 'also global!'; // all objects on the browser are global
+
+		}
+		//------------------------------------------------------------//
+		
+		<!------------------ Parent vs Child Scope ------------------->
+		var g = 'global';
+		
+		function blender(fruit){
+			var b = fruit;
+			var y = 'yogurt';
+			
+			function bs(){
+				var x = 'asdf';
+				alert( b + ' and ' + y + ' makes ' + b + ' swirl');
+			}
+			
+			console.log(); // error blender (parent) can not access 
+			// variables in bs (child)
+			bs();
+		}
+		
+		blender('blueberry');
+		//------------------------------------------------------------//
+		
+		</script>
+	</body>
+</html>

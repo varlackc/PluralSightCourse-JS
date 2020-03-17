@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>JavaScript Tutorial</title>
+	</head>
+	
+	<body>
+		<h1>JavaScript PluralSight Tutorial</h1>
+		<h2>This Page was intentionally left blank</h2>
+		
+		<script>
+		
+		<!------------- Arguments Keyword ------------------------>
+		
+		var add = function(a, b){
+			console.log(arguments); //logs [3,10,5]
+			return a + b;
+		};
+		
+		add(3,10,5) // 13
+		
+		<!----------------------------------------------------------->
+		
+		<!------------- Arguments Keyword ------------------------>
+		var add = function(a, b){
+			results = 0;
+			for(var i = 0; i < arguments.length; i++){
+				results += arguments[i];
+			}
+			
+			return results;
+		};
+		
+		console.log(add(3,10,5,3,4,6,7,100)); // 138
+		
+		<!----------------------------------------------------------->
+		
+		<!------------- Arguments Keyword ------------------------>
+		
+		var add = function(a, b){
+			console.log(arguments); //logs [3,10,5]
+			return a + b + arguments[2];
+		};
+		
+		console.log(add(3,10,5)); // 18
+		
+		<!----------------------------------------------------------->
+		
+		<!------------- Arguments Keyword Array-Like Object ------------------------>
+		
+		var add = function(a, b){
+			Array.prototype.slice.call(arguments, 0);
+			return a + b;
+		};
+		
+		console.log(add(3,10,5)); // 13
+		
+		<!----------------------------------------------------------->
+		
+		</script>
+	</body>
+</html>

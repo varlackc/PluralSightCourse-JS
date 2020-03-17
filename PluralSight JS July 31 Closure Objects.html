@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>JavaScript Tutorial</title>
+	</head>
+	
+	<body>
+		<h1>JavaScript PluralSight Tutorial</h1>
+		<h2>This Page was intentionally left blank</h2>
+		
+		<script>	
+		
+		//----- Closure Example using Methods and objects -------------//
+		function counter() {
+			var n = 0;
+			return {
+				count: function() { return ++n; },
+				reset: function() {n = 0;}
+			};
+		};
+		
+		var myCounter = counter();
+		myCounter.count() // 1
+		myCounter.count() // 2
+		myCounter.count() // 3
+		//-------------------------------------------------------------//
+		
+		//----- Closure Gotcha! -------------//
+		// look into hoisting
+		var sayAlice = function(){
+			var makeLog = function() {
+				console.log(alice);
+			};
+			
+			var alice = 'Why hello there, Alice!';
+			return makeLog;
+		};
+		
+		var whatDoesSheSay = sayAlice();
+		whatDoesSheSay(); //'Why hello there, Alice!'
+		//-------------------------------------------------------------//
+		
+		//----- Closure Make Stop Watch -------------//
+		var makeStopwatch = function(){
+			console.log('initialized');
+			var elapsed = 0;
+			console.log(elapsed);
+			
+			var stopwatch = function(){
+				console.log('stopwatch');
+				return elapsed;
+			};
+			
+			var increase = function(){elapsed++; };
+			setInterval(increase, 1000);
+			return stopwatch;
+		};
+		
+		var x = makeStopwatch();
+		x()
+		//-------------------------------------------------------------//
+		</script>
+	</body>
+</html>

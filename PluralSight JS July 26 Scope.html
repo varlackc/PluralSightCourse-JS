@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>JavaScript Tutorial</title>
+	</head>
+	
+	<body>
+		<h1>JavaScript PluralSight Tutorial</h1>
+		<h2>This Page was intentionally left blank</h2>
+		
+		<script>
+		//-------------------- Closure ----------------------------//
+		/*
+		var closureAlert = function(){
+			var x = "Help! I'm a variable stuck in a closure!";
+			var alerter = function(){
+				alert(x);
+			};
+			alerter();
+		};
+		
+		closureAlert();
+		*/
+		//-------------------------------------------------------------//
+		
+		//-------------------- Closure ----------------------------//
+		/*
+		var closureAlert = function(){
+			var x = "Help! I'm a variable stuck in a closure!";
+			var alerter = function(){
+				alert(x);
+			};
+			setTimeout(alerter, 1000);// wait for a second befor allerting
+			console.log('Will still run right after');
+		};
+		
+		closureAlert();
+		// in one second...
+		// Alaerter is called
+		*/
+		//-------------------------------------------------------------//
+		
+		//-------------------- Closure ----------------------------//
+		/*
+		var closureAlert = function(){
+			var x = 0;
+			var alerter = function(){
+				alert(++x);
+			};
+			return alerter; // not returning the function just the function definition
+			//return alerter(); // return and invoke function so it is not accessible later unless called. 
+		};
+		var funcStorer = closureAlert();
+		var funcStorer2 = closureAlert();
+		funcStorer(); //alerts 1
+		funcStorer(); // alerts 2
+		funcStorer2(); // alerts 1
+		*/
+		//-------------------------------------------------------------//
+		
+		//-------------------- Closure ----------------------------//
+		var closureAlert = function(){
+			var x = 0;
+			var alerter = function(){
+				alert(++x);
+			};
+			return alerter; // not returning the function just the function definition
+			//return alerter(); // return and invoke function so it is not accessible later unless called. 
+		};
+		var funcStorer = closureAlert();
+		var funcStorer2 = closureAlert();
+		funcStorer(); //alerts 1
+		//-------------------------------------------------------------//
+		
+		
+		</script>
+	</body>
+</html>

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>JavaScript Tutorial</title>
+	</head>
+	
+	<body>
+		<h1>JavaScript PluralSight Tutorial</h1>
+		<h2>This Page was intentionally left blank</h2>
+		
+		<script>
+		
+		<!------------------------>
+		var box = [];
+		box['size'] = 9;
+		box['0'] = 'meow';
+		box.push('Whohoo!');
+			
+		for(var i = 0; i < 3; i++){
+			console.log(box[i]);
+		}
+		box.length;//2
+		<!--------------------------->
+		
+		<!--------------------------->
+			var box = [];
+			box['0'] = 'meow';
+			box[1] = {'babyBox': true};
+		<!--------------------------->
+		
+		<!---------- Advantages of bracket notation ----------------->
+			var box = [];
+			box['0'] = 'meow';
+			box[1] = {'babyBox': true};
+			
+			box[box.length -1];
+		<!----------------------------------------------------------->
+		
+		<!----------------------------------------------------------->
+		var animal = {};
+		animal.username = 'Mittens';
+		animal['tagline'] = 'Pet me!';
+
+		
+		var noiseArray = ['purr'];
+		noiseArray.unshift('hiss');
+		noiseArray.push('meow');
+		noiseArray[3] = 'growl';
+		
+		console.log(noiseArray.length);
+		// index starts from 0 so the last is 1 less than the length
+		
+		console.log(noiseArray);
+		// --> Array ["hiss", "purr", "meow", "growl"]
+		
+		animal.noises = noiseArray;
+		console.log(animal);
+		// --> Object {username: "Mittens", tagline: "Pet me!", noises: Array[4] }
+		
+		var animals = [];
+		animals.push(animal);
+		
+		var quackers = {username: 'daffyDuck', tagline: 'Yippee!', noises: ['quack']};
+		
+		animals[animals.length] = quackers; // add quackers to the end of the array
+		
+		console.log(animals);
+		// --> [ {username: "Mittens", tagline: "Pet me!", noises: Array[4]},
+		//		 { username: 'DaffyDuck', tagline: 'Yippeee!', noises: Array[4]}]
+		
+		//object literal notation
+		var dog = {
+			username: 'Kabosu', 
+			tagline: 'Such profile',
+			noises: ['bark', 'woof', 'wow!']
+		};
+		
+		//dot notation
+		var honeyBadger = {};
+		honeyBadger.username = 'Randall';
+		honeyBadger.tagline = 'Honey badger dont care';
+		honeyBadger.noises = ['screech','growl'];
+		
+		animals.push(dog, honeyBadger);
+		
+		console.log(animals.length)
+		// --> 4
+		
+		// this is creating collections backbone uses similar structure
+		
+		console.log(animals);
+		
+		<!----------------------------------------------------------->
+		
+		</script>
+	</body>
+</html>

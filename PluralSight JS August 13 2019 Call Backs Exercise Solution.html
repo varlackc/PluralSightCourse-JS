@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>JavaScript Tutorial</title>
+	</head>
+	<body>
+		<h1>JavaScript PluralSight Tutorial</h1>
+		<h2>This Page was intentionally left blank</h2>
+		<script>	
+		//----- Continue Exercises -------------//
+			var Toaster = function(){
+				var maxTemp = 500;
+				var temp = 0;
+				return {
+					temp: 0,
+					setTemp: function(){
+						if(newTemp > maxTemp){
+							console.log("That temp is too high!");
+						}else{
+							temp = newTemp;
+						}
+					}
+				};
+			};
+			
+			var myToaster = Toaster();
+			myToaster.setTemp(300);
+		//-------------------------------------------------------------//
+		</script>
+	</body>
+</html>

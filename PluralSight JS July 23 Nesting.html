@@ -1,76 +1,75 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<title>JavaScript Tutorial</title>
-	</head>
-	
-	<body>
-		<h1>JavaScript PluralSight Tutorial</h1>
-		<h2>This Page was intentionally left blank</h2>
-		
-		<script>
-		//Very usefull for nested data structures
-		// very usefull for data coming from apis
-		
-		<!------------- Nesting ------------------------>
-		// this is a nested object because the box has an innerbox
-		var box = {};
-		box.innerBox = {};
-		<!----------------------------------------------------------->
-		
-		<!------------- Nesting ------------------------>
-		var box = {};
-		box['innerBox'] = {};
-		box['innerBox']['full'] = true;
-		<!----------------------------------------------------------->
-		
-		
-		<!------------- Nesting ------------------------>
-		var box = {};
-		box['innerBox'] = {};
-		box['innerBox']['full'] = true;
-		<!----------------------------------------------------------->
-		
-		<!------------- Nesting ------------------------>
-		var box = {};
-		box.innerBox = {};
-		box.innerBox.full = true;
-		
-		var myInnerBox = box.innerBox;
-		console.log(myInnerBox); // {full:true;}
-		<!----------------------------------------------------------->
-		
-		<!------------- Nesting ------------------------>
-		var box = {};
-		box.innerBox = {};
-		box.innerBox.babyBox = {};
-		
-		var bb = box.innerBox['babyBox']; //{}
-		box.innerBox['babyBox'].says = "what's up!?";
-		
-		bb;// {says:"What's up!?"}
-		
-		box.innerBox['babyBox']; // {says: "What's up!?"}
-		<!----------------------------------------------------------->
-		
-		<!------------- Nesting ------------------------>
-		var box = {};
-		box['innerBox'] = {};
-		box['innerBox'].full = true;
-		
-		box['innerBox]'['height'] = 10;
-		
-		//change the code so that the last line does not throw an error//
-		box.otherBox = {};
-		var innerBox2 = 'otherBox';
-		//------------------------------------------------------------//
-		
-		box[innerBox2].full = false;
-		
-		<!----------------------------------------------------------->
-		
-		
-		
-		</script>
-	</body>
+
+<head>
+    <title>JavaScript Tutorial</title>
+</head>
+
+<body>
+    <h1>JavaScript PluralSight Tutorial</h1>
+    <h2>This Page was intentionally left blank</h2>
+
+    <script>
+        //Very usefull for nested data structures
+        // very usefull for data coming from apis
+
+        //------------- Nesting -----------------------
+        // this is a nested object because the box has an innerbox
+        var box = {};
+        box.innerBox = {};
+        <!----------------------------------------------------------->
+
+        <!------------- Nesting ------------------------>
+        var box = {};
+        box['innerBox'] = {};
+        box['innerBox']['full'] = true;
+        <!----------------------------------------------------------->
+
+
+        <!------------- Nesting ------------------------>
+        var box = {};
+        box['innerBox'] = {};
+        box['innerBox']['full'] = true;
+        <!----------------------------------------------------------->
+
+        <!------------- Nesting ------------------------>
+        var box = {};
+        box.innerBox = {};
+        box.innerBox.full = true;
+
+        var myInnerBox = box.innerBox;
+        console.log(myInnerBox); // {full:true;}
+        <!----------------------------------------------------------->
+
+        <!------------- Nesting ------------------------>
+        var box = {};
+        box.innerBox = {};
+        box.innerBox.babyBox = {};
+
+        var bb = box.innerBox['babyBox']; //{}
+        box.innerBox['babyBox'].says = "what's up!?";
+
+        bb; // {says:"What's up!?"}
+
+        box.innerBox['babyBox']; // {says: "What's up!?"}
+        <!----------------------------------------------------------->
+
+        <!------------- Nesting ------------------------>
+        var box = {};
+        box['innerBox'] = {};
+        box['innerBox'].full = true;
+
+        box['innerBox]' ['height'] = 10;
+
+                //change the code so that the last line does not throw an error//
+                box.otherBox = {};
+                var innerBox2 = 'otherBox';
+                //------------------------------------------------------------//
+
+                box[innerBox2].full = false;
+
+                <!----------------------------------------------------------->
+    </script>
+</body>
+
 </html>

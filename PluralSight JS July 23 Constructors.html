@@ -1,135 +1,134 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<title>JavaScript Tutorial</title>
-	</head>
-	
-	<body>
-		<h1>JavaScript PluralSight Tutorial</h1>
-		<h2>This Page was intentionally left blank</h2>
-		
-		<script>
-		
-		<!------------- Arguments Keyword ------------------------>
-		function AnimalMaker(name){
-			return{
-				speak: function() {
-					console.log("my name is ", name);
-				}
-			};
-		};
-		
-		var animalNames = ['sheep','Liger','Big Bird'];
-		<!----------------------------------------------------------->
-		
-		<!------------- Arguments Keyword ------------------------>
-		function AnimalMaker(name){
-			return{
-				speak: function() {
-					console.log("my name is ", name);
-				},
-				name: name,
-				owner: 'Bianca'
-			};
-		};
-		
-		var animalNames = ['Sheep','Liger','Big Bird'];
-		
-		var farm = [];
-		
-		for(var i = 0; i < animalNames.length; i++){
-			farm[i] = AnimalMaker(animalNames[i]);
-		}
-		<!----------------------------------------------------------->
-		
-		
-		<!------------- looping ------------------------>
-		function AnimalMaker(name){
-			return{
-				speak: function() {
-					console.log("my name is ", name);
-				},
-				name: name,
-				owner: 'Bianca'
-			};
-		};
-		
-		var animalNames = ['Liger','Big Bird','Cheetah'];
-		var farm = [];
-		for(var i = 0; i < animalNames.length; i++){
-			farm.push(AnimalMaker(animalNames[i]));
-		}
-		<!----------------------------------------------------------->
-		
-		<!------------- Looping ------------------------>
-		function AnimalMaker(name){
-			return{
-				speak: function() {
-					console.log("my name is ", name);
-				},
-				name: name,
-				owner: 'Bianca'
-			};
-		};
-		
-		var animalNames = ['Liger','Big Bird','Cheetah'];
-		var farm = [];
-		for(var i = 0; i < animalNames.length; i++){
-			farm.push(AnimalMaker(animalNames[i]));
-		}
-		<!----------------------------------------------------------->
-		
-		<!------------- Looping ------------------------>
-		function AnimalMaker(name){
-			return{
-				speak: function() {
-					console.log("my name is ", name);
-				},
-			};
-		};
-		
-		var animalNames = ['Liger','Big Bird','Cheetah'];
-		var farm = [];
-		for(var i = 0; i < animalNames.length; i++){
-			farm[i].speak();
-		}
-		<!----------------------------------------------------------->
-		
-		
-		<!------------- Looping ------------------------>
-		function AnimalMaker(name){
-			return{
-				speak: function() {
-					console.log("my name is ", name);
-				},
-			};
-		};
-		
-		var animalNames = ['Liger','Big Bird','Cheetah'];
-		var farm = [];
-		for(var i = 0; i < animalNames.length; i++){
-			farm[i].speak();
-		}
-		<!----------------------------------------------------------->
-		
-		<!------------- Looping ------------------------>
-		function AnimalMaker(name){
-			return{
-				speak: function() {
-					console.log("my name is ", name);
-				},
-			};
-		};
-		
-		var animalNames = ['Liger','Big Bird','Cheetah'];
-		var farm = [];
-		for(var i = 0; i < animalNames.length; i++){
-			var animal = AnimalMaker(animalNames[i])
-			farm.push(animal);
-		}
-		<!----------------------------------------------------------->
-		
-		
-		</script>
-	</body>
+
+<head>
+    <title>JavaScript Tutorial</title>
+</head>
+
+<body>
+    <h1>JavaScript PluralSight Tutorial</h1>
+    <h2>This Page was intentionally left blank</h2>
+
+    <script>
+        //<!------------- Arguments Keyword ------------------------>
+        function AnimalMaker(name) {
+            return {
+                speak: function() {
+                    console.log("my name is ", name);
+                }
+            };
+        };
+
+        var animalNames = ['sheep', 'Liger', 'Big Bird'];
+        <!----------------------------------------------------------->
+
+        <!------------- Arguments Keyword ------------------------>
+        function AnimalMaker(name) {
+            return {
+                speak: function() {
+                    console.log("my name is ", name);
+                },
+                name: name,
+                owner: 'Bianca'
+            };
+        };
+
+        var animalNames = ['Sheep', 'Liger', 'Big Bird'];
+
+        var farm = [];
+
+        for (var i = 0; i < animalNames.length; i++) {
+            farm[i] = AnimalMaker(animalNames[i]);
+        }
+        <!----------------------------------------------------------->
+
+
+        <!------------- looping ------------------------>
+        function AnimalMaker(name) {
+            return {
+                speak: function() {
+                    console.log("my name is ", name);
+                },
+                name: name,
+                owner: 'Bianca'
+            };
+        };
+
+        var animalNames = ['Liger', 'Big Bird', 'Cheetah'];
+        var farm = [];
+        for (var i = 0; i < animalNames.length; i++) {
+            farm.push(AnimalMaker(animalNames[i]));
+        }
+        <!----------------------------------------------------------->
+
+        <!------------- Looping ------------------------>
+        function AnimalMaker(name) {
+            return {
+                speak: function() {
+                    console.log("my name is ", name);
+                },
+                name: name,
+                owner: 'Bianca'
+            };
+        };
+
+        var animalNames = ['Liger', 'Big Bird', 'Cheetah'];
+        var farm = [];
+        for (var i = 0; i < animalNames.length; i++) {
+            farm.push(AnimalMaker(animalNames[i]));
+        }
+        <!----------------------------------------------------------->
+
+        <!------------- Looping ------------------------>
+        function AnimalMaker(name) {
+            return {
+                speak: function() {
+                    console.log("my name is ", name);
+                },
+            };
+        };
+
+        var animalNames = ['Liger', 'Big Bird', 'Cheetah'];
+        var farm = [];
+        for (var i = 0; i < animalNames.length; i++) {
+            farm[i].speak();
+        }
+        <!----------------------------------------------------------->
+
+
+        <!------------- Looping ------------------------>
+        function AnimalMaker(name) {
+            return {
+                speak: function() {
+                    console.log("my name is ", name);
+                },
+            };
+        };
+
+        var animalNames = ['Liger', 'Big Bird', 'Cheetah'];
+        var farm = [];
+        for (var i = 0; i < animalNames.length; i++) {
+            farm[i].speak();
+        }
+        <!----------------------------------------------------------->
+
+        <!------------- Looping ------------------------>
+        function AnimalMaker(name) {
+            return {
+                speak: function() {
+                    console.log("my name is ", name);
+                },
+            };
+        };
+
+        var animalNames = ['Liger', 'Big Bird', 'Cheetah'];
+        var farm = [];
+        for (var i = 0; i < animalNames.length; i++) {
+            var animal = AnimalMaker(animalNames[i])
+            farm.push(animal);
+        }
+        <!----------------------------------------------------------->
+    </script>
+</body>
+
 </html>

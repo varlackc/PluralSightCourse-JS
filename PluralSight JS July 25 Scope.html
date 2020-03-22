@@ -1,84 +1,84 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<title>JavaScript Tutorial</title>
-	</head>
-	
-	<body>
-		<h1>JavaScript PluralSight Tutorial</h1>
-		<h2>This Page was intentionally left blank</h2>
-		
-		<script>
-		
-		<!------------------ Parent vs Child Scope ------------------->
-		var g = 'global';
-		
-		function blender(fruit){
-			var b = fruit;
-			var y = 'yogurt';
-			
-			function bs(){
-				var x = 'asdf';
-				alert( b + ' and ' + y + ' makes ' + b + ' swirl');
-			}
-			
-			console.log(); // error blender (parent) can not access 
-			// variables in bs (child)
-			bs();
-		}
-		
-		blender('blueberry');
-		//------------------------------------------------------------//
-		
-		
-		<!------------------ Privacy ------------------->
-		// in order to create privacy have to use child functions
-		
-		var g = 'global';
-		
-		function blender(fruit){
-			var b = fruit;
-			var y = 'yogurt';
-			
-			function bs(){
-				var x = 'asdf';
-				alert( b + ' and ' + y + ' makes ' + b + ' swirl');
-			}
-			
-			console.log(); // error blender (parent) can not access 
-			// variables in bs (child)
-			bs();
-		}
-		
-		blender('blueberry');
-		//------------------------------------------------------------//
-		
-		<!------------------ Precedence ------------------->
-		// the most local variable to a scope takes precedence
-		var g = "global";
-		
-		function go(){
-			var l = "local";
-			var g = "in here!";
-			alert (g + " inside go");
-		}
-		
-		go();
-		alert(g + " outside go");
-		//------------------------------------------------------------//
-		
-		//-------------------- Block Scope ----------------------------//
-		var inBlock = false;
-		
-		for(var i = 0; i < 5; i++){
-			var inBlock = true;
-		};
-		
-		if(inBlock){
-			console.log('Is there block scope? '+!inBlock);
-		}
-		//-------------------------------------------------------------//
-		
-		</script>
-	</body>
+
+<head>
+    <title>JavaScript Tutorial</title>
+</head>
+
+<body>
+    <h1>JavaScript PluralSight Tutorial</h1>
+    <h2>This Page was intentionally left blank</h2>
+
+    <script>
+        //<!------------------ Parent vs Child Scope ------------------->
+        var g = 'global';
+
+        function blender(fruit) {
+            var b = fruit;
+            var y = 'yogurt';
+
+            function bs() {
+                var x = 'asdf';
+                alert(b + ' and ' + y + ' makes ' + b + ' swirl');
+            }
+
+            console.log(); // error blender (parent) can not access 
+            // variables in bs (child)
+            bs();
+        }
+
+        blender('blueberry');
+        //------------------------------------------------------------//
+
+
+        <!------------------ Privacy ------------------->
+        // in order to create privacy have to use child functions
+
+        var g = 'global';
+
+        function blender(fruit) {
+            var b = fruit;
+            var y = 'yogurt';
+
+            function bs() {
+                var x = 'asdf';
+                alert(b + ' and ' + y + ' makes ' + b + ' swirl');
+            }
+
+            console.log(); // error blender (parent) can not access 
+            // variables in bs (child)
+            bs();
+        }
+
+        blender('blueberry');
+        //------------------------------------------------------------//
+
+        <!------------------ Precedence ------------------->
+        // the most local variable to a scope takes precedence
+        var g = "global";
+
+        function go() {
+            var l = "local";
+            var g = "in here!";
+            alert(g + " inside go");
+        }
+
+        go();
+        alert(g + " outside go");
+        //------------------------------------------------------------//
+
+        //-------------------- Block Scope ----------------------------//
+        var inBlock = false;
+
+        for (var i = 0; i < 5; i++) {
+            var inBlock = true;
+        };
+
+        if (inBlock) {
+            console.log('Is there block scope? ' + !inBlock);
+        }
+        //-------------------------------------------------------------//
+    </script>
+</body>
+
 </html>
